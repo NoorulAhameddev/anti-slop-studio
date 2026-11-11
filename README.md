@@ -1,61 +1,79 @@
-# 🚀 Anti-Slop Web Design Studio & Master Framework
+# Anti-Slop Web Design Studio
 
-Transform AI web development from generic, purple-gradient "AI Slop" templates into bespoke, high-converting, $10,000-level web applications using **AntiGravity**, **Claude Code**, and modern vibe-coding workflows.
-
----
-
-## 🌟 Key Features
-
-### 1. 🔍 AI Slop Code Auditor & Linter
-- Analyzes raw HTML / JSX code for AI slop indicators:
-  - ❌ Purple / Indigo default gradients (`from-purple`, `to-indigo`)
-  - ❌ Card & border overload (wrapping everything in `rounded-xl border border-gray`)
-  - ❌ Random glowing background lights without text contrast
-  - ❌ Top-level button clutter
-- Generates a live 0-100% Anti-Slop Quality Score and 1-click refactor prompts for AI agents.
-
-### 2. 🎨 Art Bible (`design.md`) Generator
-- Tailors visual design tokens (surface HSL colors, typography scales, spacing grids).
-- Exports ready-to-inject `design.md` files for 100% component visual normalization.
-
-### 3. 🎬 Editorial Motion System
-- Scroll progress bar, staggered fade-up reveals, and animated stat counters.
-- Bracket-style buttons, hairline dividers, and a slop-sins ticker tape.
-
-### 4. 📚 ANF & PAGES Framework Playbooks
-- **7 Levels of AI Web Design** roadmap (from Level 1 simple prompting to Level 7 WebGL/shaders).
-- **ANF Framework:** Assemble (components) → Normalize (tokens) → Fill (high-converting copy).
-- **PAGES Framework:** Purpose → Anchor (Hero animation) → Guide (Copywriting) → Elevate (UI sniping) → Ship (Vercel).
-
-### 5. 🧠 Integrated Agent Skill
-- Includes `.agents/skills/anti-slop-web-design/SKILL.md` ready for agentic workflows across projects.
+A frontend code quality auditor, linter, and design token normalization framework designed to eliminate generic templating patterns in AI-generated web interfaces.
 
 ---
 
-## 🛠️ Getting Started
+## Core Capabilities
+
+### 1. Code Auditor and Linter
+Analyzes raw HTML, JSX, and TSX markup for common design anti-patterns:
+* Overused default color gradients and saturated palette presets
+* Excessive nested card wrapping and uniform border radiuses
+* Low-contrast ambient background artifacts
+* Header navigation and primary action clutter
+
+Computes an objective 0–100% interface quality metric and provides automated prompt corrections for coding agents.
+
+### 2. Design Token Generator
+Generates customized design system specifications (`design.md`) detailing:
+* Surface and border HSL color palettes
+* Typeface pairing and typographic scale hierarchies
+* Consistent spatial grid measurements
+* Component state styles
+
+### 3. Motion System
+* Deterministic scroll progress indicators
+* Staggered element reveals
+* Synchronized stat counters
+* Hairline borders and minimal divider elements
+
+### 4. Agent Skill Integration
+Includes `.agents/skills/anti-slop-web-design/SKILL.md` to directly inject interface design standards into agentic coding workflows.
+
+---
+
+## Getting Started
 
 ### Prerequisites
-- Node.js 18+ installed.
+* Node.js 18.0 or higher
+* npm 9.0 or higher
 
-### Installation & Launch
+### Installation
+
 ```bash
+# Clone repository
+git clone https://github.com/NoorulAhameddev/anti-slop-studio.git
+cd anti-slop-studio
+
 # Install dependencies
 npm install
 
-# Start local development server
+# Start development server
 npm run dev
 
-# Build for production
+# Build production bundle
 npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to launch the Anti-Slop Studio.
+The application runs locally at `http://localhost:3000`.
 
 ---
 
-## 📂 Repository Architecture
+## Repository Structure
 
-- `Best_Practices_Guide.md`: The 5-Phase Master Plan synthesis of 8 masterclass videos.
-- `Transcripts/`: 16 raw transcripts from top YouTube web design & vibe coding masterclasses.
-- `.agents/skills/anti-slop-web-design/SKILL.md`: The official AI Agent Skill.
-- `src/`: React 19 + Tailwind v4 + Lucide application components.
+```
+anti-slop-studio/
+├── .agents/skills/       # Agent skill definitions
+├── public/               # Static assets, robots.txt, sitemap
+├── src/                  # React components, styles, application logic
+├── Best_Practices_Guide.md # Technical implementation guidelines
+├── package.json          # Node dependencies and scripts
+└── vite.config.js        # Vite build configuration
+```
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
