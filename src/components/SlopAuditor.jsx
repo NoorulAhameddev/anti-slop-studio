@@ -435,7 +435,7 @@ export default function SlopAuditor() {
                               className={`copy-btn ${copiedId === finding.id ? 'copied' : ''}`}
                               onClick={() => copyFix(finding.fix, finding.id)}
                             >
-                              {copiedId === finding.id ? '✓ Copied' : 'Copy Fix'}
+                              {copiedId === finding.id ? 'Copied' : 'Copy Fix'}
                             </button>
                           </div>
                         </div>
