@@ -82,6 +82,46 @@ const SLOP_RULES = [
     patterns: [/animate-bounce/g, /animate-ping/g, /animate-spin.*absolute/g, /floating.*absolute.*animate/gi],
     fix: 'Use intentional entrance animations (fadeUp, stagger) and scroll-linked motion. Bouncing elements add noise, not delight.',
   },
+  {
+    id: 'gradient-text',
+    label: 'Gradient Text Clipping',
+    category: 'Typography',
+    severity: 'slop',
+    patterns: [/bg-clip-text.*text-transparent/g, /text-transparent.*bg-clip-text/g, /bg-gradient-to-.*text-transparent/g],
+    fix: 'Use solid, high-contrast typography. Gradient text reduces legibility and screams generic template SaaS.',
+  },
+  {
+    id: 'nested-cards',
+    label: 'Nested Cards / Container Soup',
+    category: 'Layout',
+    severity: 'warn',
+    patterns: [/<Card.*<Card/gs, /rounded-[a-z]+.*rounded-[a-z]+.*rounded-[a-z]+/g],
+    fix: 'Flatten your visual hierarchy. Use background tint shifts or borderless sections rather than wrapping cards inside cards.',
+  },
+  {
+    id: 'marketing-hype',
+    label: 'Cliché Marketing Hype & Buzzwords',
+    category: 'Copy',
+    severity: 'warn',
+    patterns: [/supercharge/gi, /empower your/gi, /10x developer/gi, /next-generation ai/gi, /all-in-one platform/gi, /game-changing/gi],
+    fix: 'State the concrete utility and outcome. Replace "Supercharge your workflow" with what the tool actually delivers.',
+  },
+  {
+    id: 'arbitrary-spacing',
+    label: 'Arbitrary Pixel Spacing',
+    category: 'Layout',
+    severity: 'warn',
+    patterns: [/p-\[\d+px\]/g, /gap-\[\d+px\]/g, /m-\[\d+px\]/g, /h-\[\d+px\]/g],
+    fix: 'Stick to an intentional 4px/8px modular scale (p-4, p-6, gap-8) to maintain harmonic visual rhythm.',
+  },
+  {
+    id: 'low-contrast-text',
+    label: 'Low-Contrast Unreadable Text',
+    category: 'Accessibility',
+    severity: 'slop',
+    patterns: [/text-gray-400.*bg-white/g, /text-slate-400.*bg-white/g, /text-zinc-400.*bg-zinc-50/g, /opacity-40.*text-/g],
+    fix: 'Ensure at least 4.5:1 contrast for normal text and 3:1 for large text. Gray-400 on white fails WCAG AA standards.',
+  },
 ];
 
 function countMatches(code, patterns) {
